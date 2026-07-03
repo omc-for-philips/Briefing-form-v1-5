@@ -8,8 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function restoreGitHubPagesRoute(location) {
+        if (location.search[1] !== '/') return
+
+        var route = location.search
+          .slice(1)
+          .split('&')
+          .map(function(part) {
+            return part.replace(/~and~/g, '&')
+          })
+          .join('?')
+
+        window.history.replaceState(
+          null,
+          '',
+          location.pathname.slice(0, -1) + route + location.hash
+        )
+      })(window.location)
+    </script>
     <title>Philips Briefing Form</title>
-    <script type="module" crossorigin src="./assets/index-BxTsvenu.js"></script>
+    <script type="module" crossorigin src="./assets/index-dUI6Z3OH.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D02wAobh.css">
   </head>
   <body>
